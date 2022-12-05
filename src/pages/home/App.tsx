@@ -1,12 +1,37 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
+import Modal from "../../component/Modal";
 import "./App.css";
 
 function App() {
+  const [open, setOpen] = useState(false);
+
+  const openModal = () => {
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <div className="HomeContainer">
       <h3>Projeto de Arquitetura</h3>
       <p>Configuração do corpo inicial do projeto</p>
+
+      {/* Exemplo de como usar toast */}
       <button onClick={() => toast.success("mensagem")}>Toast</button>
+
+      {/* Exemplo de como usar modal */}
+      <button onClick={openModal}>Abrir modal</button>
+      {open && (
+        // É obrigatório enviar os atributos title, width e close
+        <Modal title="Cadastrar" width="500px" close={closeModal}>
+          <p>Nome:</p>
+          <input />
+        </Modal>
+      )}
     </div>
   );
 }
