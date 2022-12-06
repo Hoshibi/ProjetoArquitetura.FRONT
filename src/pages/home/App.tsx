@@ -18,25 +18,19 @@ function App() {
   return (
     <div className="HomeContainer">
       <div id="MainScreen">
-        <button>
-          + Adicionar Programa
-        </button>
 
         <div className="List">
           Programas no Sistema
-          <div>
-
-          </div>
+          <button>
+            + Adicionar Programa
+          </button>
           <ul>
             <li>ID</li>
             <li>Nome Programa</li>
             <li>Data</li>
             <li>Gestor</li>
-            <button>Gerenciar Programa</button>
-            <button>Excluir Programa</button>
           </ul> 
-          <div className= "Tabela">
-            
+          <div className= "Tabela">        
           </div>
         </div>
       </div>
