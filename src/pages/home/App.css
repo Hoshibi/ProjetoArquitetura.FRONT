@@ -1,6 +1,6 @@
 .HomeContainer {
   height: 100vh;
-  background-color: #e5e5e0;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,44 +11,54 @@
 }
 
 .List{
+  background-color: #E6E7D9;
+  width: 85%;
   text-align: center;
   margin: 40px;
   padding: 10px;
-  border-style: solid;
+  border: 3px groove #f1f1f1;
   border-radius: .3rem;
-  width: 90vh;
 }
 
-.Tabela{
-  background-color: antiquewhite;
-  width: auto;
-  height: 200px;
-  border-color: #8a8a8a;
-  border-radius: 1px;
-  border-style: solid;
-}
-
-ul{
-  list-style-type: none;
-  margin: 5px;
-  padding: 0;
-  overflow: hidden;
-  background-color: none;
-  border-style: solid;
-  border-color: rgb(117, 117, 117);
-}
-
-li{
-  float: left;
-  text-align: left;
+.b_modal{
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
   padding-right: 10px;
+}
+
+.b_modal_disabled{
+  margin-top: 5px;
+  background-color: #496852;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.b_modal_disabled:hover{
+  background-color: #496852;
+  cursor: not-allowed;
+}
+
+.date{
+  text-align: center;
+}
+
+input[type=text],select{
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 3px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  box-sizing: border-box;
 }
 
 button{
   float: right;
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color: #0069FF;
+  background-color: #007524;
   border-radius: .4rem;
   padding: .4rem;
   transition-duration: .4s;
@@ -59,9 +69,28 @@ button{
 }
 
 button:hover{
-  background-color: #09215c;
+  background-color: #004916;
+  cursor: pointer;
 }
 
 button:active{
   box-shadow: inset 0 0 .4rem rgba(0, 0, 255, 1);
+}
+
+.links{
+  float: right;
+}
+
+img{
+  max-width: 30px;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+td,th{
+  font-size: 24px;
+  padding: .3rem;
+  border-bottom: 1px solid #ffffff;
 }
