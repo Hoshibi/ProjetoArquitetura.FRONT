@@ -74,8 +74,7 @@ function App() {
             </select>
           </p>
           <p>Procedimento: <input type="text" placeholder="Procedimentos a serem realizados"></input></p>
-          {/*Checar se houve alteracoes, os campos de input devem carregar automaticamente o que esta salvo.*/}
-          <button className="b_modal">Cancelar</button><button className="b_modal_disabled">Confirmar Alteracoes</button>
+          <button className="b_modal">Cancelar</button><button className="b_modal">Confirmar Alteracoes</button>
         </Modal>
       )}
 
@@ -90,50 +89,58 @@ function App() {
 
       {/* Página */}
       <div className="HomeContainer">
-        <div id="MainScreen">
-          <div className="List">
-            <table>
-              <caption><b>Programas no Sistema</b><button onClick={openModalRegister}>+ Adicionar Programa</button></caption>
-              <p></p>
-              <tr>
-                <th>ID</th>
-                <th>Nome Programa</th>
-                <th>Data</th>
-                <th>Gestor</th>
-                <th>Opcoes</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Rede Eletrica</td>
-                <td>24/12/2022</td>
-                <td>Carlos</td>
-                <td>
-                  <img className="links" src="../trash.png" alt="" onClick={openModalDelete}/>
-                  <img className="links" src="../pencil.png" alt="" onClick={openModalEdit}/>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Rede Eolica</td>
-                <td>05/03/2023</td>
-                <td>Roberto</td>
-                <td>
-                  <img className="links" src="../trash.png" alt="" onClick={openModalDelete}/>
-                  <img className="links" src="../pencil.png" alt="" onClick={openModalEdit}/>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Manutencao Subestacao</td>
-                <td>12/01/2023</td>
-                <td>Mariana</td>
-                <td>
-                  <img className="links" src="../trash.png" alt="" onClick={openModalDelete}/>
-                  <img className="links" src="../pencil.png" alt="" onClick={openModalEdit}/>
-                </td>
-              </tr>
-            </table>
-          </div>
+        <div className="List">
+          <table>
+            <caption><b>Programas no Sistema</b><button onClick={openModalRegister}>+ Adicionar Programa</button></caption>
+            <p></p>
+            <tr>            
+              <th>ID</th>
+              <th>Nome Programa</th>
+              <th>Data</th>
+              <th>Gestor</th>
+              <th>Opcoes</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Rede Eletrica</td>
+              <td>24/12/2022</td>
+              <td>Carlos</td>
+              <td>
+                <img src="../trash.png" alt="" onClick={openModalDelete}/>
+                <img src="../pencil.png" alt="" onClick={openModalEdit}/>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Rede Eolica</td>                
+              <td>05/03/2023</td>
+              <td>Roberto</td>
+              <td>
+                <img src="../trash.png" alt="" onClick={openModalDelete}/>
+                <img src="../pencil.png" alt="" onClick={openModalEdit}/>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Manutencao Subestacao</td>
+              <td>12/01/2023</td>
+              <td>Mariana</td>
+              <td>
+                <img src="../trash.png" alt="" onClick={openModalDelete}/>
+                <img src="../pencil.png" alt="" onClick={openModalEdit}/>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Manutencao Patio</td>
+              <td>12/01/2022</td>
+              <td>Gustavo</td>
+              <td>
+                <img src="../trash.png" alt="" onClick={openModalDelete}/>
+                <img src="../pencil.png" alt="" onClick={openModalEdit}/>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </>
