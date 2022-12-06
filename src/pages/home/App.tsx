@@ -4,58 +4,82 @@ import Modal from "../../component/Modal";
 import "./App.css";
 
 function App() {
-  const [open, setOpen] = useState(false);
+  const [modalRegister, setModalRegister] = useState(false);
+  const [modalEdit, setModalEdit] = useState(false);
+  const [modalDelete, setModalDelete] = useState(false);
 
-  const openModal = () => {
-    setOpen(true);
+  // Lógica Modal Register ------------
+  const openModalRegister = () => {
+    setModalRegister(true);
+  };
+  const closeModalRegister = () => {
+    setModalRegister(false);
   };
 
-  const closeModal = () => {
-    setOpen(false);
-    document.body.style.overflow = "auto";
+  // Lógica Modal Edit -----------------
+  const openModalEdit = () => {
+    setModalEdit(true);
+  };
+  const closeModalEdit = () => {
+    setModalEdit(false);
+  };
+
+  // Lógica Modal Delete --------------
+  const openModalDelete = () => {
+    setModalDelete(true);
+  };
+  const closeModalDelete = () => {
+    setModalDelete(false);
   };
 
   return (
-    <div className="HomeContainer">
-      <div id="MainScreen">
-        <button>
-          + Adicionar Programa
-        </button>
+    <>
+      {/* Modal Register */}
+      {modalRegister && (
+        <Modal title="Cadastrar" width="500px" close={closeModalRegister}>
+          <p>Conteúdo cadastro</p>
+        </Modal>
+      )}
 
-        <div className="List">
-          Programas no Sistema
-          <div>
-
-          </div>
-          <ul>
-            <li>ID</li>
-            <li>Nome Programa</li>
-            <li>Data</li>
-            <li>Gestor</li>
-            <button>Gerenciar Programa</button>
-            <button>Excluir Programa</button>
-          </ul> 
-          <div className= "Tabela">
-            
-          </div>
-        </div>
-      </div>
-      <h3>Projeto de Arquitetura</h3>
-      <p>Configuração do corpo inicial do projeto</p>
-
-      {/* Exemplo de como usar toast */}
-      <button onClick={() => toast.success("mensagem")}>Toast</button>
-
-      {/* Exemplo de como usar modal */}
-      <button onClick={openModal}>Abrir modal</button>
-      {open && (
-        // É obrigatório enviar os atributos title, width e close
-        <Modal title="Cadastrar" width="500px" close={closeModal}>
-          <p>Nome:</p>
+      {/* Modal Edit */}
+      {modalEdit && (
+        <Modal title="Editar" width="500px" close={closeModalEdit}>
+          <p>Conteúdo editar</p>
           <input />
         </Modal>
       )}
-    </div>
+
+      {/* Modal Delete */}
+      {modalDelete && (
+        <Modal title="Deletar" width="500px" close={closeModalDelete}>
+          <p>Conteúdo deletar</p>
+          <input />
+        </Modal>
+      )}
+
+      {/* Página */}
+      <div className="HomeContainer">
+        <div id="MainScreen">
+          <button onClick={openModalRegister}>+ Adicionar Programa</button>
+
+          <div className="List">
+            Programas no Sistema
+            <div></div>
+            <ul>
+              <li>ID</li>
+              <li>Nome Programa</li>
+              <li>Data</li>
+              <li>Gestor</li>
+              <button onClick={openModalEdit}>Gerenciar Programa</button>
+              <button onClick={openModalDelete}>Excluir Programa</button>
+            </ul>
+            <div className="Tabela"></div>
+          </div>
+        </div>
+        <h3>Projeto de Arquitetura</h3>
+        <p>Configuração do corpo inicial do projeto</p>
+      </div>
+    </>
   );
 }
 
