@@ -1,0 +1,117 @@
+.HomeContainer {
+  height: 100vh;
+  background-color: #fcf9f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(29, 29, 29) !important;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.Logo{
+  display: flex;
+  align-items: center;
+  gap: 15px
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92%;
+  margin: 70px 40px 0px;
+}
+
+.List{
+  background-color: #E6E7D9;
+  width: 90%;
+  height: fit-content;
+  text-align: center;
+  margin: 40px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: .3rem;
+}
+
+.List p {
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.b_modal{
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cancel_b_modal{
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ca2727 !important;
+}
+
+.date{
+  text-align: center;
+}
+
+input[type=text],select{
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 3px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+button{
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #007524;
+  border-radius: .4rem;
+  padding: .7rem;
+  transition-duration: .4s;
+  text-align: center;
+  color: #e5e5e0;
+  font-weight: bold;
+  border: none;
+
+}
+
+button:hover{
+  background-color: #004916;
+  cursor: pointer;
+}
+
+button:active{
+  box-shadow: inset 0 0 .4rem rgba(0, 0, 255, 1);
+}
+
+img{
+  max-width: 25px;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+td,th{
+  font-size: 16px;
+  padding: .3rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+td{
+  font-weight: 400;
+}
+
+table{
+  width: 100%;
+}
