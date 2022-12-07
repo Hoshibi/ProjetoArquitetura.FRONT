@@ -1,22 +1,11 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 
 export const api = axios.create({
-  baseURL: process.env.API_PUBLIC_URL,
-});
-
-api.interceptors.response.use(
-  (res) => {
-    const { data } = res || {};
-    if ((res?.status === 201 || res?.status === 200)) {
-      toast.success(data?.message);
-    }
-    return res;
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
   },
-  (error: any) => {
-    const { response } = error;
-    return Promise.reject(response);
-  }
-);
+  baseURL: "http://localhost:2202",
+});
 
 export default api;
