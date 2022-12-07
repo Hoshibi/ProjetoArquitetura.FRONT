@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
-import App from "./pages/home/App";
+import App from "./pages/programs/Programs";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
